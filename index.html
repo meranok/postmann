@@ -10,7 +10,31 @@
     <div class="app-container">
         <div class="container">
             <h1 class="header">Postman is Super</h1>
-        </div>
+    <div class="request-section">
+        <select id="method-select" class="method-select bg-input-dark">
+            <option value="GET">GET</option>
+            <option value="POST">POST</option>
+            <option value="PUT">PUT</option>
+            <option value="PATCH">PATCH</option>
+            <option value="DELETE">DELETE</option>
+        </select>
+        <input type="text" id="url-input" placeholder="Enter URL" class="request-input bg-input-dark" />
+        <button id="send-button" class="send-button">Send</button>
     </div>
+    <div id="request-body-section" class="request-body-section hidden">
+        <h2 class="sub-header text-dark-gray">Request Body (JSON)</h2>
+        <textarea id="request-body-textarea" placeholder='Enter JSON body here' class="request-body-textarea bg-input-dark"></textarea>
+    </div>
+    <div class="response-section">
+        <h2 class="sub-header text-dark-gray">
+          Response
+        </h2>
+        <div class="response-box bg-input-dark">
+          <pre id="response-data">Click "Send" to see a response.</pre>
+        </div>
+       </div>
+      </div>
+     </div>
+     <script src="./app.js"></script>
 </body>
 </html>
